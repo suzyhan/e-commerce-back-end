@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
       include: [{ model: Product, attributes: ['id', 'product_name', 'price', 'stock', 'category_id'] }],
     });
 
-    if (!tagtData) {
+    if (!tagData) {
       res.status(404).json({ message: 'No tags found!' });
       return;
     }
@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
       include: [{ model: Product, attributes: ['id', 'product_name', 'price', 'stock', 'category_id'] }],
     });
 
-    if (!tagtData) {
+    if (!tagData) {
       res.status(404).json({ message: 'No tag found!' });
       return;
     }
